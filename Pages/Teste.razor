@@ -1,0 +1,42 @@
+﻿@page "/teste"
+
+<Titulo Texto="@xpto"></Titulo>
+
+<div>
+	<label class="text-muted"> Digite seu nome:</label>
+	<input class="form-control" @bind-value=xpto/> 
+</div>
+
+<div class="mt-3">
+	<button @onclick="Mudar" class="btm btn-outline-primary">Mudar Titulo</button>
+</div>
+
+<div class="row border mt-3">
+	<div class="col bg-primary">
+		Coluna 1
+	</div>
+	<div class="col bg-success">
+		Coluna 2
+	</div>
+	<div class="col bg-warning">
+		Coluna 4
+	</div>
+</div>
+
+<div class="mt-3 rounded p-5 shadow">
+	<h1> Esse é um texto em tamanho h1</h1>
+</div>
+
+@code
+{
+	string xpto = "Andre Campos";
+	string minhaClasse;
+	string meuEstilo;
+
+	void Mudar()
+	{
+		xpto = "Componente Exemplo";
+		minhaClasse = "text-success";
+		meuEstilo = "font-size: 3rem";
+	}
+		}
